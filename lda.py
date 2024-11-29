@@ -9,6 +9,12 @@ from nltk.tokenize import RegexpTokenizer
 
 text_dir = "./parsed"
 
+num_topics = 10
+chunksize = 2000
+passes = 20
+iterations = 400
+eval_every = None  # Don't evaluate model perplexity, takes too much time.
+
 
 def preprocess(docs):
     # Split the documents into tokens.
@@ -65,12 +71,6 @@ def main():
     print(f"Number of documents: {len(corpus)}")
     print(f"Number of unique tokens: {len(dictionary)}")
 
-    # Set training parameters.
-    num_topics = 10
-    chunksize = 2000
-    passes = 20
-    iterations = 400
-    eval_every = None  # Don't evaluate model perplexity, takes too much time.
 
     # Make an index to word dictionary.
     _ = dictionary[0]  # This is only to "load" the dictionary.
