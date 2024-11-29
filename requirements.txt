@@ -1,4 +1,6 @@
 easyocr
-pymupdf
 gdown
+gensim
+nltk
+pymupdf
 tqdm
