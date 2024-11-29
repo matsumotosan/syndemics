@@ -73,7 +73,7 @@ def main():
     eval_every = None  # Don't evaluate model perplexity, takes too much time.
 
     # Make an index to word dictionary.
-    temp = dictionary[0]  # This is only to "load" the dictionary.
+    _ = dictionary[0]  # This is only to "load" the dictionary.
     id2word = dictionary.id2token
 
     model = LdaModel(
