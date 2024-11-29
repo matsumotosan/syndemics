@@ -36,7 +36,7 @@ def preprocess(docs):
     bigram = Phrases(docs, min_count=20)
     for idx in range(len(docs)):
         for token in bigram[docs[idx]]:
-            if '_' in token:
+            if "_" in token:
                 # Token is a bigram, add to document.
                 docs[idx].append(token)
 
@@ -71,7 +71,6 @@ def main():
     print(f"Number of documents: {len(corpus)}")
     print(f"Number of unique tokens: {len(dictionary)}")
 
-
     # Make an index to word dictionary.
     _ = dictionary[0]  # This is only to "load" the dictionary.
     id2word = dictionary.id2token
@@ -80,19 +79,19 @@ def main():
         corpus=corpus,
         id2word=id2word,
         chunksize=chunksize,
-        alpha='auto',
-        eta='auto',
+        alpha="auto",
+        eta="auto",
         iterations=iterations,
         num_topics=num_topics,
         passes=passes,
-        eval_every=eval_every
+        eval_every=eval_every,
     )
 
     top_topics = model.top_topics(corpus)
 
     # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
     avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
-    print('Average topic coherence: %.4f.' % avg_topic_coherence)
+    print("Average topic coherence: %.4f." % avg_topic_coherence)
     pprint(top_topics)
 
 
