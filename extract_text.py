@@ -9,7 +9,7 @@ URL = "https://drive.google.com/drive/folders/1iXGcp-935YK8L27EFt5YzA_Wx1R9AOzd"
 
 
 def main():
-    output_dir = "./output"
+    output_dir = "./parsed"
     pdf_dir = "./SyndemicsResearchArticles"
 
     os.makedirs(output_dir, exist_ok=True)
