@@ -1,8 +1,8 @@
 import os
-import pathlib
+from pathlib import Path
+
 import pymupdf
 from tqdm import tqdm
-
 
 URL = "https://drive.google.com/drive/folders/1iXGcp-935YK8L27EFt5YzA_Wx1R9AOzd"
 
@@ -20,8 +20,8 @@ def main():
     # gdown.download_folder(URL, output=pdf_dir, quiet=False)
 
     # Extract text for all PDFs
-    path_pdf = pathlib.Path(pdf_dir)
-    path_output = pathlib.Path(output_dir)
+    path_pdf = Path(pdf_dir)
+    path_output = Path(output_dir)
 
     files = [f for f in path_pdf.iterdir() if f.is_file()]
 
@@ -32,7 +32,7 @@ def main():
         basename = f.stem
 
         # write as a binary file to support non-ASCII characters
-        pathlib.Path(path_output / f"{basename}.txt").write_bytes(text.encode())
+        Path(path_output / f"{basename}.txt").write_bytes(text.encode())
 
 
 if __name__ == "__main__":
