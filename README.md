@@ -42,3 +42,5 @@ python lda.py --text_dir=<text_dir>
 ```
 
 ## References
+
+- [PyMuPDF: Text](https://pymupdf.readthedocs.io/en/latest/recipes-text.html#)
