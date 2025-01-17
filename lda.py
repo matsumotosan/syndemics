@@ -1,3 +1,4 @@
+from argparse import ArgumentParser
 from pathlib import Path
 from pprint import pprint
 
@@ -6,8 +7,6 @@ from gensim.corpora import Dictionary
 from gensim.models import LdaModel, Phrases
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
-
-text_dir = "./parsed"
 
 num_topics = 10
 chunksize = 2000
@@ -49,12 +48,12 @@ def preprocess(docs):
     return docs, dictionary
 
 
-def main():
+def main(args):
     # Download corpora
     nltk.download("wordnet")
 
     # Get parsed text files
-    path_text = Path(text_dir)
+    path_text = Path(args.text_dir)
     files = [f for f in path_text.iterdir() if f.is_file()]
 
     docs = []
@@ -96,4 +95,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = ArgumentParser()
+    parser.add_argument("--text_dir", type=str, default="./parsed")
+    args = parser.parse_args()
+    main(args)

@@ -34,7 +34,11 @@ Output of parsed texts will be in new directory `./parsed`.
 Train an LDA model on extracted text:
 
 ```sh
+# Default text dir is `./parsed`
 python lda.py
+
+# If using text in non-default directory
+python lda.py --text_dir=<text_dir>
 ```
 
 ## References
