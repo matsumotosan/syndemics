@@ -86,11 +86,17 @@ def main(args):
         eval_every=eval_every,
     )
 
-    top_topics = model.top_topics(corpus)
+    topics = model.print_topics(num_topics=num_topics)
+    print(f"\n----- MOST SIGNIFICANT TOPICS (n={num_topics}) -----")
+
+    pprint(topics)
+
+    top_topics = model.top_topics(corpus, topn=num_topics)
 
     # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
     avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
-    print("Average topic coherence: %.4f." % avg_topic_coherence)
+    print(f"\n----- TOPIC COHERENCE (n={num_topics}) -----")
+    print(f"Average topic coherence: {avg_topic_coherence:.4f}.")
     pprint(top_topics)
 
 
