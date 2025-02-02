@@ -23,7 +23,7 @@ Place PDFs in directory `./SyndemicsResearchArticles`.
 Extract text from PDFs:
 
 ```sh
-python extract.py
+python extract_text.py
 ```
 
 Output of parsed texts will be in new directory `./parsed`.
