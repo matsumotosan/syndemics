@@ -6,8 +6,7 @@ Create a virtual environment and install the requirements:
 
 ```sh
 python -m venv .venv
-source activate .venv/bin/activate
-
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
