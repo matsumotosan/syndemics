@@ -40,6 +40,18 @@ python lda.py
 python lda.py --text_dir=<text_dir>
 ```
 
+### HDP model
+
+Train an HDP model on extracted text:
+
+```sh
+# Default text dir is `./parsed`
+python hdp.py
+
+# If using text in non-default directory
+python hdp.py --text_dir=<text_dir>
+```
+
 ## References
 
 - [PyMuPDF: Text](https://pymupdf.readthedocs.io/en/latest/recipes-text.html#)
