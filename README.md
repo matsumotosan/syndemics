@@ -53,7 +53,7 @@ python hdp.py --text_dir=<text_dir>
 ```
 
 ### HDP .html files
-To view the interactive 3D plots on your device, simply download either 'hdp.html' or 'hdp_words.html' and open them.
+To view the interactive 3D plots on your device, simply download either `hdp.html` or `hdp_words.html` and open them.
 
 ## References
 
