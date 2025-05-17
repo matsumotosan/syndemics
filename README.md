@@ -57,7 +57,7 @@ python hdp.py --text_dir=<text_dir>
 To view the interactive 3D plots on your laptop/computer, simply download either `hdp.html` or `hdp_words.html` and open them in your preferred web browser.
 
 #### Mobile Device
-To view the interactive 3D plots on your mobile device, simply download either `hdp.html` or `hdp_words.html` and open them in your preferred web browser
+To view the interactive 3D plots on your mobile device, simply download either `hdp.html` or `hdp_words.html` and open them in your preferred web browser.
 
 ## References
 
